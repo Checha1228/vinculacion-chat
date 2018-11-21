@@ -1,0 +1,91 @@
+.cont-app-progress
+	height 50px
+	margin 30px auto
+	position relative
+	width 210px
+	
+	.line-app-progress
+		background-color $grisccc
+		height 2px
+		position absolute
+		top 50%
+		width 100%
+		z-index 10
+		
+		.steps-app-progress
+			margin 0
+			padding 0
+
+            li
+				cursor pointer
+				display inline-block
+				float left
+				margin 0
+				padding 13px 0 0 0
+				width 70px
+				
+				&.first-app-step
+					.cont-app-circle-step
+						left 0
+
+					.cont-app-number-step
+						left 9px
+						position absolute
+						top -10px
+
+                &.middle-app-step
+					.cont-app-circle-step
+						left 44%
+						
+					.cont-app-number-step
+						left 101px
+						position absolute
+						top -10px
+
+				
+				&.last-app-step
+					.cont-app-circle-step
+						right 0
+						 
+					.cont-app-number-step
+						right 9px
+						position absolute
+						top -10px
+
+				
+				&.active
+					cursor default
+					
+					.cont-app-circle-step
+						border 2px solid $primary
+
+					.circle-app-step
+						background-color $primary !important
+					
+					.cont-app-number-step
+						color $blanco
+						
+	.cont-app-circle-step
+		background $grisapp
+		border 2px solid $grisccc
+		border-radius 100%
+		height 20px
+		position absolute
+		text-align center
+		top -12px
+		width 20px
+		
+		.circle-app-step
+			background $grisapp
+			border 0
+			height 80%
+			left 10% !important
+			position absolute
+			top 12% !important
+			width 80%
+		
+.cont-app-number-step
+	color $grisccc
+	font-size 0.9rem
+	font-weight $light
+	text-align center

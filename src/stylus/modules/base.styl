@@ -1,0 +1,44 @@
+/*
+-deben ser elementos por default que lucirán igual en todo el sitio, es .
+-ningún estilo de estos elementos selectores deberá usar !important.
+-no usar selectores tipo class o id.
+*/
+
+html
+	overflow-x hidden
+
+body
+	background $grisapp
+	color $grisclaro
+	font-family $roboto
+	margin 0
+	overflow-x hidden
+	padding 0
+	position relative
+
+select
+	border-radius 0
+
+.cont-all-app
+	margin 0 auto 20px
+	max-width 530px 
+	width 94%
+
+	.cont-chat-white
+		background $blanco
+		border 1px solid $grisccc
+		border-radius 6px
+		margin-top 30px
+		width 100%
+
+		.chat-title-name
+			color $grisclaro
+			font-size 2rem
+			margin-bottom 0
+			text-align center
+		
+		.chat-subtitle-hello
+			font-size 1.2rem
+			font-weight $light
+			margin-top 0
+			text-align center

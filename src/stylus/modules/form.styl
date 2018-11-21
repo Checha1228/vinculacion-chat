@@ -1,0 +1,167 @@
+.cont-chat-hidden
+	height 170px
+	overflow hidden
+
+.cont-chat-form
+	margin-top 40px
+	padding 0 8px
+
+	.group-chat-input
+		height 170px
+		position relative
+		text-align center
+		transition margin-top 0.2s linear
+
+		.chat-label-default
+			font-size 1.1rem
+			font-weight $light
+			width 80%
+
+		.chat-input-default,
+		.chat-select-default
+			background transparent 
+			border-bottom 1px solid $grisoscuro
+			border-width 0 0 1px 0
+			color $grisclaro
+			font-family $roboto
+			font-size 1.1rem
+			font-weight $light
+			height 40px
+			margin-top 40px
+			padding 0 10px
+			text-align right
+			transition border 0.4s ease-in            
+			width 90%
+
+			&:focus
+				border-bottom 1px solid $primary
+				border-width 0 0 1px 0
+				box-shadow 0
+				outline none
+
+		.cont-chat-address-input
+			display flex
+			flex-direction row 
+
+			.chat-select-default
+				height 41px
+				margin-right 8px
+				max-width 200px
+				width 150%
+
+				&.arrow
+					background-image linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%)
+					background-position calc(100% - 10px) calc(1em + 2px), calc(100% - 5px) calc(1em + 2px), calc(100% - 2.5em) 0.5em
+					background-repeat no-repeat
+					background-size 5px 5px, 5px 5px, 1px 1.5em
+				
+			.text-chat-address
+				font-size 1.1rem
+				height 1.1rem
+				line-height 1.1rem
+				margin 51px 8px 0
+		
+		.legal-chat-address
+			color $grisccc
+			font-size 0.8rem
+			font-style italic
+			font-weight $light
+			margin-top 4px
+		
+		.cont-chat-option-address
+			float left
+			margin-top 50px
+			width 32%
+
+			&.m-left
+				margin-left 18%
+
+.label-chat-radio
+  cursor pointer
+  margin auto
+  user-select none
+  
+	span
+		display inline-block
+		font-size 1.2rem
+		font-weight $light
+		transform translate3d(0, 0, 0)
+		vertical-align middle
+
+		&:first-child
+			border 2px solid $primary
+			border-radius 3px
+			height 22px
+			position relative
+			transform scale(1)
+			transition all 0.2s ease
+			vertical-align middle
+			width 22px
+		
+		svg
+			fill none
+			left 1px
+			position absolute
+			stroke $blanco
+			stroke-dasharray 16px
+			stroke-dashoffset 16px
+			stroke-linecap round
+			stroke-linejoin round
+			stroke-width 2
+			top 0px
+			transition all 0.3s ease
+			transition-delay 0.1s
+			transform translate3d(0, 0, 0)
+
+		&:before
+			background $primary
+			border-radius 50%
+			content ""
+			display block
+			height 100%
+			opacity 1
+			transform scale(0)
+			width 100%
+
+		&:last-child
+			padding-left 8px
+
+	&:hover span:first-child
+		border-color $primary
+
+.input-chat-radio
+	opacity 0
+
+.input-chat-radio:checked + .label-chat-radio
+	span
+		&:first-child
+			animation wave 0.4s ease
+			background $primary
+			border-color $primary
+		svg
+			stroke-dashoffset 0
+		&:before
+			opacity 0
+			transform scale(3.5)
+			transition all 0.6s ease
+
+	@keyframes wave
+		50%
+			transform scale(0.9)
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button 
+	appearance none
+	margin 0
+
+input[type=number] 
+	-moz-appearance textfield
+
+.icon-chat-calendar
+	background-image url('../images/Img-chat-icon-Calendar.svg')
+	bottom 46px
+	display block
+	height 24px
+	left 18px
+	position absolute
+	width 24px
