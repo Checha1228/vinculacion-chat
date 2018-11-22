@@ -1,14 +1,1 @@
-"use strict";
-
-jQuery(document).ready(function ($) {
-	jQuery("#enviarSubmit").click(function (event) {
-		event.preventDefault();
-		var margin = jQuery(".group-chat-input:first-child").css('margin-top');
-		var number = margin.replace('px', '');
-		number = number - 170;
-		if (number >= -1620) {
-			jQuery(".group-chat-input:first-child").css('margin-top', number + 'px');
-		}
-	});
-});
-//# sourceMappingURL=../maps/test.js.map
+"use strict";jQuery(document).ready(function(r){jQuery("#enviarSubmit").click(function(r){r.preventDefault();var t=jQuery(".group-chat-input:first-child").css("margin-top").replace("px","");-1620<=(t-=170)&&jQuery(".group-chat-input:first-child").css("margin-top",t+"px")})});
