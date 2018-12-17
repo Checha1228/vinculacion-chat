@@ -1,1 +1,0 @@
-"use strict";jQuery(document).ready(function(r){jQuery("#enviarSubmit").click(function(r){r.preventDefault();var t=jQuery(".group-chat-input:first-child").css("margin-top").replace("px","");-1620<=(t-=170)&&jQuery(".group-chat-input:first-child").css("margin-top",t+"px")})});
